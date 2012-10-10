@@ -1,0 +1,30 @@
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="default.ntml">
+                    Ejemplo basico de Request y Response en Swig + HTML + CSS
+                </a>
+            </p>
+        </div>
+        <div class="float-right">
+            <section id="login">
+                <ul id="login">
+                    {% if true %}
+                        <li><a href="logoff.cshtml">Cerrar Sesion</a></li>
+                    {% else %}
+                        <li><a href="logon.cshtml">Iniciar Sesion</a></li>
+                    {% endif %}
+                </ul>
+                {% if true %}
+                    {% set usuario = "Kurapika" %}
+                    <div class="welcomeMessage">Bienvenido, <strong>{{usuario}}</strong></div>
+                {% else %}
+                    <div class="welcomeMessage">No se ha autenticado</div>
+                {% endif %}
+            </section>
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    {% include "navbar.ntml" %}
+</header>

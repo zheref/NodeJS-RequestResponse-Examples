@@ -1,0 +1,444 @@
+﻿html
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    background-color: white;
+    color: #434343;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+a:link, a:visited, a:active, a:hover
+{
+    color: #333;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+    transition: font-weight 1s;
+    -moz-transition: font-weight 1s;
+    -webkit-transition: font-weight 1s;
+    -o-transition: font-weight 1s;
+}
+
+a:hover
+{
+    background-color: #c7d1d6;
+    font-weight: bold;
+}
+
+header
+{
+    background-image: url("../img/headback.png");
+    color: white;
+}
+
+header, footer, hgroup
+nav, section {
+    display: block;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.highlight {
+    background-color: #a6dbed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+
+/* main layout
+----------------------------------------------------------*/
+
+.welcomeMessage
+{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.error
+{
+    color: red;
+    font-size: 15px;
+}
+
+.outer-wrapper{
+    min-height: 100%;
+    background-color: #efeeef;
+}
+.content-wrapper {
+    margin: 0;
+    padding:  10px 20px;
+    height:  100%;
+}
+
+#main {
+    clear: both;
+    margin-top:  0;
+    overflow:auto;
+	padding: 30px 0px 50px;
+    height: 100%;
+    min-height: 100%;
+    margin-left: 30px;
+    max-width: 600px;
+}
+
+    .main-content {
+        background: url("../img/asterisk.png") no-repeat;
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+
+    .featured + .main-content {
+        background: url("../img/heroAccent.png") no-repeat;
+    }
+
+.visit{
+    font-size: 18pt;
+}
+
+.visit a:link, .visit a:visited,
+.visit a:active, .visit a:hover {
+    color: #4A91CE;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #E2E2E2;
+    clear: both;
+    font-size: 0.8em;
+    height: 50px;
+    margin-top: -50px; /* negative value of footer height */
+    position: relative;
+    text-align: center;         
+}
+
+footer .footer-wrapper {
+    margin: 0;
+    padding:  3px 20px;
+}
+
+
+/* site title
+----------------------------------------------------------*/
+.site-title {
+    color: #c8c8c8;
+    font-family: "Segoe UI", "Segoe WP", "Trebuchet MS", "Arial";
+    font-size: 2.7em;
+    margin: 20px 0 5px 0;
+}
+
+.site-title a, .site-title a:hover, .site-title a:active {
+    background: none;
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* login
+----------------------------------------------------------*/
+#login 
+{
+    display: block;
+    font-size: .85em;
+    margin: 7px 0 12px;
+    text-align: right;
+}
+
+#login a
+{
+    background-color: #d3dce0;
+    margin-left: 10px;
+    margin-right: 3px;
+    padding: 2px 3px;
+    text-decoration: none;
+}
+
+#login a.username 
+{
+    background: none;
+    margin-left: 0px;
+    text-decoration: underline;
+}
+
+#login ul
+{
+    margin: 0;
+}
+
+#login li
+{
+    display: inline;
+    list-style: none;
+}
+
+
+/* menu
+----------------------------------------------------------*/
+ul#menu
+{
+    font-size: 14pt;
+    margin: 0;
+    text-align: left;
+    padding: 3px 0 10px 25px;
+}
+
+ul#menu li 
+{
+    display:block;
+    float: left;
+    text-align:center;
+    padding-right: 28px
+}
+
+ul#menu li a 
+{
+    background: none;
+    color: #FDFEFF;
+    text-decoration: none;
+    padding: 4px 10px;
+    transition: padding 0.3s;
+    -moz-transition: padding 0.4s;
+    -webkit-transition: padding 0.4s;
+    -o-transition: padding 0.4s;
+}
+
+ul#menu li a:hover 
+{
+    background-color: black;
+    color: cyan;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+
+/* page elements
+----------------------------------------------------------*/
+
+/* Navegacion */
+.navigation 
+{
+    border-top: 5px solid white;
+    margin: 0;
+    padding:  0;
+    display: table;
+    width: 100%;
+    background-image: url("../img/headback.png");
+    color: white;
+    padding: 3px 0 6px 25px;
+}
+
+
+/* page titles */
+hgroup.title {
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 {
+    display: inline;
+}
+
+hgroup.title h2 {
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+/* features */
+section.feature {
+    /*width: 300px;*/
+    float: left;
+    padding: 10px;
+}
+
+/* ordered list */
+ol.round {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    ol.round li {
+        margin: 20px 0;
+        padding-left: 45px;
+    }
+
+        ol.round li.one {
+            background: url("../img/orderedListOne.png") no-repeat;
+        }
+
+        ol.round li.two {
+            background: url("../img/orderedListTwo.png") no-repeat;
+        }
+
+        ol.round li.three {
+            background: url("../img/orderedListThree.png") no-repeat;
+        }
+
+        ol.round li.asterisk {
+            background: url("../img/asterisk.png") no-repeat;
+        }
+
+/* content */
+article {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+}
+
+    aside ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        aside ul li {
+            background: url("../img/asterisk.png") no-repeat 0 50%;
+            padding: 2px 0 2px 20px;
+        }
+
+.label {
+    font-weight: 700;
+}
+
+/* login page */
+#loginForm {
+    border-right: solid 2px #c8c8c8;
+    float: left;
+    width: 45%;
+}
+
+    #loginForm .validation-error {
+        display: block;
+        margin-left: 15px;
+    }
+
+#socialLoginForm {
+    margin-left: 40px;
+    float: left;
+    width: 50%;
+}
+
+/* contact */
+.contact h3 {
+    font-size: 1.2em;
+}
+
+.contact p {
+    margin: 5px 0 0 10px;
+}
+
+.contact iframe {
+    border: solid 1px #333;
+    margin: 5px 0 0 10px;
+}
+
+/* forms */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    fieldset legend {
+        display: none;
+    }
+    
+    fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+    fieldset label {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    fieldset label.checkbox {
+        display: inline;
+    }
+
+    fieldset input[type="text"],
+    fieldset input[type="password"] {
+        border: 1px solid #e2e2e2;
+        color: #333;
+        font-size: 1.2em;
+        margin: 5px 0 6px 0;
+        padding: 5px;
+        width: 300px;
+    }
+
+        fieldset input[type="text"]:focus,
+        fieldset input[type="password"]:focus {
+            border: 1px solid #7ac0da;
+        }
+
+    fieldset input[type="submit"] {
+        background-color: #d3dce0;
+        border: solid 1px #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+    }

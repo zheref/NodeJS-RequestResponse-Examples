@@ -1,0 +1,9 @@
+{% set titulo = "Mi primer login" %}
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" charset="utf-8" />
+    <title>{{titulo}}</title>
+    <link href="css/site.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
