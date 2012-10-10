@@ -3,7 +3,7 @@ var cons = require('consolidate'); // Libreria que nos permite configurar cualqu
 var swig = require('swig');
 
 var gets = require('./routes');
-var posts = require('./calls');
+var auth = require('./auth');
 
 var app = express(); // Nuestra aplicacion EXPRESS
 
@@ -26,16 +26,26 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
-app.use(express.session());
+
+app.use(express.cookieParser());
+app.use
+(
+	express.cookieSession
+	({
+  		username : "",
+  		islogged : false,
+  		secret : "secret"
+	})
+);
+
 app.use(app.router);
 app.use(express.static(__dirname)); // Establecemos directorio root
 
 app.get('/', gets.root);
 app.get('/:id.ntml', gets.general);
 
-app.post('/auth', posts.auth);
-app.get('/logoff', posts.authoff);
+app.post('/auth', auth.logon);
+app.get('/logoff', auth.logoff);
 
 app.listen(app.get('port'));
 console.log('Express server listening on port 3000');
