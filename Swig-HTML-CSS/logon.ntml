@@ -2,7 +2,7 @@
 {% block content %}
 <div id="main">
     <h2>Autentificarse</h2>
-        <form action="auth.cshtml" method="post">
+        <form action="auth" method="post">
             <fieldset>
             <legend>Datos de usuario</legend>
             <ol>

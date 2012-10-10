@@ -2,6 +2,9 @@ var express = require('express'); // El Framework Web como tal
 var cons = require('consolidate'); // Libreria que nos permite configurar cualquier Template Engine
 var swig = require('swig');
 
+var gets = require('./routes');
+var posts = require('./calls');
+
 var app = express(); // Nuestra aplicacion EXPRESS
 
 app.set('port', process.env.PORT || 3000);
@@ -28,16 +31,10 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(__dirname)); // Establecemos directorio root
 
-app.get('/', function (req, res) // Asignamos accion de enrutamiento a root
-{
-    res.render('index', { foo: 'bar' });
-});
+app.get('/', gets.root);
+app.get('/:id.ntml', gets.general);
 
-app.get('/:id.ntml', function(req, res)
-{
-	console.log('Intentando extraer parametro' + req.params.id);
-	res.render(req.params.id);
-});
+app.post('/auth', posts.auth);
 
 app.listen(app.get('port'));
 console.log('Express server listening on port 3000');
