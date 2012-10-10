@@ -10,14 +10,14 @@
         <div class="float-right">
             <section id="login">
                 <ul id="login">
-                    {% if true %}
-                        <li><a href="logoff.cshtml">Cerrar Sesion</a></li>
+                    {% if islogged %}
+                        <li><a href="logoff">Cerrar Sesion</a></li>
                     {% else %}
-                        <li><a href="logon.cshtml">Iniciar Sesion</a></li>
+                        <li><a href="logon.ntml">Iniciar Sesion</a></li>
                     {% endif %}
                 </ul>
-                {% if true %}
-                    {% set usuario = "Kurapika" %}
+                {% if islogged %}
+                    {% set usuario = username %}
                     <div class="welcomeMessage">Bienvenido, <strong>{{usuario}}</strong></div>
                 {% else %}
                     <div class="welcomeMessage">No se ha autenticado</div>

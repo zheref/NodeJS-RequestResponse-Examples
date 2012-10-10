@@ -35,6 +35,7 @@ app.get('/', gets.root);
 app.get('/:id.ntml', gets.general);
 
 app.post('/auth', posts.auth);
+app.get('/logoff', posts.authoff);
 
 app.listen(app.get('port'));
 console.log('Express server listening on port 3000');
